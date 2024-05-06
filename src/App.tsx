@@ -11,8 +11,10 @@ const jsonData: { [key: string]: string } = {
   "politician": "politician, businesswoman, woman, activist, she, actress, jurist, daughter, mother, lawmaker",
   "coach": "coach, coached, coaches, coaching, basketball, assistant, team, she, her, manager",
   "football": "football, soccer, basketball, volleyball, hockey, softball, club, tennis, rugby, women",
-  "lawyer": "lawyer, attorney, lawyers, she, her, mother, wife, attorneys, woman, husband",
-  "warrior": "warrior, princess, heroine, herself, woman, goddess, warriors, mother, her, queen"
+  "books": "books, book, novels, her, she, magazines, author, paperback, pages, fiction",
+  "warrior": "warrior, princess, heroine, herself, woman, goddess, warriors, mother, her, queen",
+  "burly": "burly, haired, blond, lanky, beefy, wiry, blonde, bearded, feisty, clad",
+  "pharmaceuticals": "pharmaceuticals, cosmetics, pharmaceutical, novartis, drugmaker, chemicals, biotechnology, astrazeneca, medicines, glaxosmithkline"
 }
 
 function App() {
@@ -25,7 +27,10 @@ function App() {
   const options = Object.keys(jsonData);
   const [showComponent, setShowComponent] = useState(false);
   const HoverComponent = () => {
-    return <div>where does this data come from?</div>;
+    return <div>where does this data come from? who wrote the words? 
+      <br></br>did you know that 
+      there are people who volunteer their time and energy editing wikipedia?
+    </div>;
   };
 
   return (
