@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-
+import QuestionMark from './QuestionMark';
 interface TextConverterProps {
   onSubmit: (text: string) => void;
-  options: string[]; // Array of available keys
+  options: string[]; // Array of available keys;
+  showComponent: boolean;
+  setShowComponent: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-function TextConverter({ onSubmit, options }: TextConverterProps) {
+function TextConverter({ onSubmit, options, showComponent, setShowComponent}: TextConverterProps) {
   const [selectedOption, setSelectedOption] = useState('');
   const [result, setResult] = useState<string | null>(null);
 
@@ -19,7 +21,32 @@ function TextConverter({ onSubmit, options }: TextConverterProps) {
     setResult(submissionResult !== undefined ? submissionResult : null); // Set result based on the returned value
   };
   
+  const linkStyle: React.CSSProperties = {
+    color: 'magenta',
+    textDecoration: 'underline', // Optionally, add underline to links
+  };
+
+  const wikiStyle: React.CSSProperties = {
+    color: '#0000ff',
+    padding: 0
+  };
   
+    const toggleComponent = () => {
+      setShowComponent(!showComponent);
+    };
+
+  const questionText =  <div>
+  GloVe, or{' '}
+  <a style={linkStyle} target="_blank" href="https://nlp.stanford.edu/projects/glove/">
+    Global Vectors for Word Representation
+  </a>
+  , is an AI algorithm that learns vector representations for words aka word embeddings. The algorithm was partially trained on the{' '}
+  <span style={wikiStyle} onMouseEnter={toggleComponent} onMouseLeave={toggleComponent}>
+    2014 Wikipedia corpus.
+  </span>{' '}
+  We can add and subtract these vectors to get analogies. For eg. she - he + word1 = word2. The 10 most common results for some words have been stored here for you to view.
+</div>
+           
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -34,13 +61,19 @@ function TextConverter({ onSubmit, options }: TextConverterProps) {
           {" is to? "}
           <br></br>
         </label>
-        <button type="submit" className="boxes">ask GloVe, your AI tool</button>
+        <button type="submit" className="boxes">click to ask GloVe, your AI tool</button>
+        <QuestionMark text={questionText}/>
         <br></br>
-        {result ?? "?"}
+        {result ?? "waiting for results..."}
       </form>
       <br></br>
-      <a href="code.html" target="_blank">visit code</a>
+      <a href="code.html" target="_blank" className="visitcode">for more info, visit code!</a>
+      <br></br> 
+        <a href="https://arxiv.org/abs/1607.06520" target="_blank" className="sthwrong">
+          Something wrong? This might explain it...</a>
+      
     </div>
+
   );
 }
 

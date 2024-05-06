@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './styles/App.css';
 import GlitchedImage from '../src/components/GlitchedImage';
 import InputBox from '../src/components/Input';
+import QuestionMark from '../src/components/QuestionMark'
 
 const jsonData: { [key: string]: string } = {
   "programmer": "programmer, programmers, designer, actress, freelance, computer, software, stylist, user, interface",
@@ -22,13 +23,18 @@ function App() {
   };
   
   const options = Object.keys(jsonData);
+  const [showComponent, setShowComponent] = useState(false);
+  const HoverComponent = () => {
+    return <div>where does this data come from?</div>;
+  };
 
   return (
     <div className="App">
       <header className="App-header">
         <div className="container">
+        {showComponent && <HoverComponent />} 
           <div className="component1">
-            <InputBox onSubmit={handleSubmit} options={options}/>
+            <InputBox onSubmit={handleSubmit} options={options} setShowComponent={setShowComponent} showComponent={showComponent}/>
           </div>
           <div className="component2"> 
           <GlitchedImage /> 

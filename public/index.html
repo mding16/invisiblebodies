@@ -24,9 +24,25 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>HIDDEN LABOR</title>
+    <title>HIDDEN LABOR BEHIND WORD EMBEDDINGS *</title>
   </head>
   <body>
+    <script>
+      // Function to scroll the title in the browser tab
+      function scrollTitle() {
+        var title = document.title; // Get the current title
+        var words = title.split(" "); // Split the title into words
+        var speed = 300; // Speed of scrolling (adjust as needed)
+        var firstWord = words.shift(); // Remove the first word
+        words.push(firstWord); // Add the first word to the end
+        var newTitle = words.join(" "); // Join the words back into a title
+        document.title = newTitle; // Set the new title
+        setTimeout(scrollTitle, speed); // Schedule next iteration
+      }
+
+      // Call the function to start scrolling the title
+      scrollTitle();
+    </script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
