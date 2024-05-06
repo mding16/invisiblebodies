@@ -3,6 +3,7 @@ import './styles/App.css';
 import GlitchedImage from '../src/components/GlitchedImage';
 import InputBox from '../src/components/Input';
 import QuestionMark from '../src/components/QuestionMark'
+import Fade from '../src/components/Fade'
 
 const jsonData: { [key: string]: string } = {
   "programmer": "programmer, programmers, designer, actress, freelance, computer, software, stylist, user, interface",
@@ -38,6 +39,18 @@ function App() {
       <header className="App-header">
         <div className="container">
         {showComponent && <HoverComponent />} 
+        <Fade marginTop="50px" marginBottom="0" marginLeft="50px" marginRight="0" />
+        <Fade marginTop="0" marginBottom="50px" marginLeft="0" marginRight="50px" />
+        <Fade marginTop="0" marginBottom="0" marginLeft="50px" marginRight="50px" />
+        <Fade marginTop="50px" marginBottom="50px" marginLeft="0" marginRight="0" />
+        <Fade marginTop="50px" marginBottom="0" marginLeft="50px" marginRight="0" />
+        <Fade marginTop="0" marginBottom="50px" marginLeft="0" marginRight="50px" />
+        <Fade marginTop="0" marginBottom="0" marginLeft="50px" marginRight="50px" />
+        <Fade marginTop="50px" marginBottom="50px" marginLeft="0" marginRight="0" />
+        <Fade marginTop="50px" marginBottom="0" marginLeft="50px" marginRight="0" />
+        <Fade marginTop="0" marginBottom="50px" marginLeft="0" marginRight="50px" />
+        <Fade marginTop="0" marginBottom="0" marginLeft="50px" marginRight="50px" />
+        <Fade marginTop="50px" marginBottom="50px" marginLeft="0" marginRight="0" />
           <div className="component1">
             <InputBox onSubmit={handleSubmit} options={options} setShowComponent={setShowComponent} showComponent={showComponent}/>
           </div>
