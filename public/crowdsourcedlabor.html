@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CROWDSOURCED LABOR</title>
+    <style>
+      body {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        background-color: #0000ff;
+        padding: 20px;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      p {
+        color: black;
+        text-align: left;
+        font-size: 18px;
+      }
+      .highlight {
+        color: white;
+      }
+      a {
+        color: black;
+      }
+      .highlight1 {
+        color: black;
+        background-color: magenta;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p>
+        <span class="highlight"
+          >Even in “noble” efforts to reduce gender bias, there are invisible
+          bodies that contributed to those results.</span
+        >
+        <a href="https://arxiv.org/abs/1607.06520" target="_blank"
+          >Bolukbasi et al. 2016</a
+        >
+        showed that “biases in the word embeddings are in fact closely aligned
+        with social conception of gender stereotype” using a crowd-sourcing
+        website called
+        <a href="https://www.mturk.com/" target="_blank">
+          Amazon Mechanical Turk (or MTurk).
+        </a>
+        The researchers generated analogies for the “she-he” pair, including
+        “blonde-burly”, “nurse-surgeon”, and “vocalist-guitarist” using
+        word2vec. Then, each analogy was evaluated by 10 MTurk workers to
+        determine “whether or not it reflects gender stereotype.”
+        <span class="highlight1">
+          The opinions of these workers serve as a basis for whether researchers
+          deem analogies as “gender appropriate” or “gender stereotype.”
+        </span>
+
+        In
+        <a href="https://ghostwork.info/" target="_blank"> "Ghost Work", </a
+        >Mary L. Gray and Siddharth Suri detail the experiences of crowd-source
+        workers on MTurk. According to their research, “platforms like MTurk
+        provide very little, if any, data about the workers to the requesters”,
+        in this case, the researchers. All requesters know is a worker ID, like
+        “A16HE9ETNPHNONN.”
+        <span class="highlight1">
+          Not only are these workers not credited and undercompensated
+          (especially in contrast to the AI engineers), but they are also
+          dehumanized by the application programming interface (API) that
+          connects them to their work.
+        </span>
+
+        Additionally, “algorithmic cruelties inflict pain on workers” that may
+        arise through “executing a job without any feedback or in isolation from
+        peers and colleagues”, the possible “risk of not getting paid”, and a
+        “lack of empathy” for workers’ potential emotional distress. In the case
+        of Bolukbasi et al. (2016), workers being targeted by the gender
+        stereotype they were asked to evaluate could be triggered by the task
+        but remain on the job for fear of failure or lowered reputation scores.
+        In fact, many people who have “faced discrimination in the workplace
+        because of disability, sexual orientation, or gender identity” joined
+        crowd-sourcing platforms to “avoid harassment.”
+      </p>
+    </div>
+  </body>
+</html>

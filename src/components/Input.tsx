@@ -64,7 +64,7 @@ function TextConverter({ onSubmit, options, showComponent, setShowComponent, set
 
 const resultsText =  <div>
 You may have noticed that these results reflect gender stereotypic analogies. 
-Word embedding algorithms like the early 2013 {' '}
+Word embedding algorithms like the 2013 {' '}
 <a style={linkStyle} target="_blank" href="https://code.google.com/archive/p/word2vec/">
   Word2Vec
 </a>{' '}
@@ -110,7 +110,12 @@ algorithm.
         <QuestionMark text={resultsText} buttontext="*2"/>
       </form>
       <br></br>
-      <a href="code.html" target="_blank" className="visitcode">view code</a>
+      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+
+      <a href="about.html" target="_blank" className="visitcode">About</a>
+      <a href="code.html" target="_blank" className="visitcode">Code</a>
+    </div>
+
       
     </div>
 

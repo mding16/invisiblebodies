@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './styles/App.css';
 import GlitchedImage from '../src/components/GlitchedImage';
 import InputBox from '../src/components/Input';
@@ -30,17 +30,55 @@ function App() {
   const [showComponent1, setShowComponent1] = useState(false);
   const [showComponent2, setShowComponent2] = useState(false);
   const HoverComponent = () => {
-    return <div>where does this data come from? who wrote the words? 
-      <br></br>did you know that 
-      there are people who volunteer their time and energy editing wikipedia?
+    return <div className="hover">where did this data come from? who wrote it?
+    <br></br>
+     press -d for dataset labor
     </div>;
   };
+
+  const HoverComponent1 = () => {
+    return <div className="hover">where did you get the computer to train it? 
+    who mined the materials?
+    <br></br>
+     press -h for hardware labor
+    </div>;
+  };
+
+  const HoverComponent2 = () => {
+    return <div className="hover">who evaluated these stereotypes?
+    <br></br>
+     press -c for crowdsourced labor
+    </div>;
+  };
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'd') {
+        window.open('datasetlabor.html', '_blank');
+      }
+      if (event.key === 'h') {
+        window.open('hardwarelabor.html', '_blank');
+      }
+      if (event.key === 'c') {
+        window.open('crowdsourcedlabor.html', '_blank');
+      }
+    };
+  
+    document.addEventListener('keydown', handleKeyDown);
+  
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
+  
 
   return (
     <div className="App">
       <header className="App-header">
         <div className="container">
         {showComponent && <HoverComponent />} 
+        {showComponent1 && <HoverComponent1 />} 
+        {showComponent2 && <HoverComponent2 />} 
         <Fade/>
         <Fade/><Fade/>
           <div className="component1">
