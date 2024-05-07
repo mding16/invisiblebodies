@@ -55,7 +55,7 @@
   transform: translate(-50%, -50%);
   z-index: 1; /* Ensure component1 is above other content */
   background-color: #0000ff;
-  padding: 20px; /* Add padding to all sides */
+  padding: 50px; /* Add padding to all sides */
   opacity: 1; /* Set the opacity */
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: 500;
@@ -83,7 +83,7 @@
 
 .visitcode{
   color: magenta;
-  font-size:14px
+  font-size:18px
 }
 
 .sthwrong{
