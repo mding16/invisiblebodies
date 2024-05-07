@@ -112,8 +112,9 @@ algorithm.
       <br></br>
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
 
-      <a href="about.html" target="_blank" className="visitcode">About</a>
+      
       <a href="code.html" target="_blank" className="visitcode">Code</a>
+      <a href="about.html" target="_blank" className="visitcode">About</a>
     </div>
 
       
