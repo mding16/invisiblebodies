@@ -12,7 +12,7 @@ function GlitchedImage() {
       const newWidth = Math.floor(Math.random() * 101) + 100; // Random width between 100% and 200%
       const newHeight = Math.floor(Math.random() * 101) + 100; // Random height between 100% and 200%
       setBackgroundSize(`${newWidth}% ${newHeight}%`);
-    }, 800);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
@@ -39,19 +39,19 @@ function GlitchedImage() {
               filter: hue-rotate(0deg);
             }
             15%, 25%, 45%, 55%, 75%, 85% {
-              transform: translate(-5px, -5px); /* Move the image slightly */
+              transform: none /* Move the image slightly */
               filter: hue-rotate(0deg) brightness(150%) contrast(200%); /* Increase brightness and contrast */
             }
             20% {
-              transform: translate(5px, 5px); /* Move the image slightly */
+              transform: none /* Move the image slightly */
               filter: hue-rotate(30deg) brightness(200%) contrast(250%); /* Increase brightness and contrast */
             }
             40% {
-              transform: translate(-5px, 5px); /* Move the image slightly */
+              transform: none /* Move the image slightly */
               filter: hue-rotate(60deg) brightness(150%) contrast(200%); /* Increase brightness and contrast */
             }
             60% {
-              transform: translate(5px, -5px); /* Move the image slightly */
+              transform: none /* Move the image slightly */
               filter: hue-rotate(90deg) brightness(200%) contrast(250%); /* Increase brightness and contrast */
             }
             80% {

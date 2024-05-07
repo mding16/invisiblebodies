@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: 0000ff;
 }
 
 .App-logo {
@@ -81,7 +82,8 @@
 }
 
 .visitcode{
-  color: magenta
+  color: magenta;
+  font-size:18px
 }
 
 .sthwrong{
