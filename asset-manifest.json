@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/invisiblebodies/static/css/main.355c83f2.css",
+    "main.css": "/invisiblebodies/static/css/main.9dbac162.css",
     "main.js": "/invisiblebodies/static/js/main.1799c12d.js",
     "static/js/787.84caad0f.chunk.js": "/invisiblebodies/static/js/787.84caad0f.chunk.js",
     "static/media/code.png": "/invisiblebodies/static/media/code.0ada75930524b1e836ba.png",
     "index.html": "/invisiblebodies/index.html",
-    "main.355c83f2.css.map": "/invisiblebodies/static/css/main.355c83f2.css.map",
+    "main.9dbac162.css.map": "/invisiblebodies/static/css/main.9dbac162.css.map",
     "main.1799c12d.js.map": "/invisiblebodies/static/js/main.1799c12d.js.map",
     "787.84caad0f.chunk.js.map": "/invisiblebodies/static/js/787.84caad0f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.355c83f2.css",
+    "static/css/main.9dbac162.css",
     "static/js/main.1799c12d.js"
   ]
 }
